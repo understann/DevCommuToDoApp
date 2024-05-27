@@ -26,7 +26,7 @@ struct ContentView: View {
               print(" Index Set : \(indexSet)")
               for index in indexSet{
                 print(" Index : \(index)")
-                deleteItem(items[index])
+                context.delete(items[index])
               }
             }
           }
@@ -37,7 +37,7 @@ struct ContentView: View {
               print(" Index Set : \(indexSet)")
               for index in indexSet{
                 print(" Index : \(index)")
-                deleteItem(items[index])
+                context.delete(items[index])
               }
             }
           }
@@ -65,9 +65,7 @@ struct ContentView: View {
   }
   
   
-  func deleteItem(_ item: DataItem){
-    context.delete(item)
-  }
+  
   
   func updateitem(_ item: DataItem) {
     item.isCheck = !item.isCheck

@@ -32,7 +32,7 @@ struct AddToDoView: View {
           }
           ToolbarItem(placement: .topBarTrailing){
             Button("Add"){
-              addItem()
+              context.insert(newItem)
               dismiss()
             }
           }
@@ -40,9 +40,6 @@ struct AddToDoView: View {
       }
     }
   
-  func addItem(){
-    context.insert(newItem)
-  }
 }
 
 #Preview {

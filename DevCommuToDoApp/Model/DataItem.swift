@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class DataItem {
+class DataItem: Identifiable {
     var name: String
     var isCheck: Bool = false 
     var dueDate: Date
